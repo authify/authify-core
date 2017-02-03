@@ -1,10 +1,11 @@
 module Authify
   module Core
+    # Some handy methods for SHA512 and Base64
     module SecureHashing
       # Convert a string to a Base64 encoded version of itself
       # @return [String]
       def to_64(string)
-        Base64.encode64(string).chomp.gsub("\n", '')
+        Base64.encode64(string).chomp.delete("\n")
       end
 
       # Decode a Base64 encoded string
@@ -14,7 +15,7 @@ module Authify
       end
 
       def to_hex(data)
-        data.unpack('H*').first.chomp.gsub("\n", '')
+        data.unpack('H*').first.chomp.delete("\n")
       end
 
       def sha512(string)

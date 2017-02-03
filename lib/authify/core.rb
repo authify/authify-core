@@ -17,7 +17,7 @@ module Authify
       jwt: {
         issuer: ENV['AUTHIFY_JWT_ISSUER'] || 'My Awesome Company Inc.'
       }
-    }
+    }.freeze
   end
 end
 

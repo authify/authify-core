@@ -1,6 +1,7 @@
 module Authify
   module Core
     module Helpers
+      # Helpers for accessing the SSL certs used for JWT
       module JWTSSL
         def private_key
           path = File.expand_path(CONFIG[:ssl][:private])
