@@ -23,5 +23,5 @@ end
 
 require 'authify/core/version'
 require 'authify/core/secure_hashing'
-require 'authify/core/constants/jwt/scopes'
-require 'authify/core/helpers/jwt/ssl'
+require 'authify/core/constants/jwt_scopes'
+require 'authify/core/helpers/jwt_ssl'
