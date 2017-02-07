@@ -15,7 +15,9 @@ module Authify
         private: ENV['AUTHIFY_PRIVKEY_PATH'] || File.join('~', '.authify', 'ssl', 'private.pem')
       },
       jwt: {
-        issuer: ENV['AUTHIFY_JWT_ISSUER'] || 'My Awesome Company Inc.'
+        algorithm: ENV['AUTHIFY_JWT_ALGORITHM'] || 'ES512',
+        issuer: ENV['AUTHIFY_JWT_ISSUER'] || 'My Awesome Company Inc.',
+        expiration: ENV['AUTHIFY_JWT_EXPIRATION'] || 15
       }
     }.freeze
   end
