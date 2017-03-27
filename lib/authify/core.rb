@@ -6,6 +6,7 @@ require 'base64'
 # External Requirements
 require 'jwt'
 require 'openssl'
+require 'pony'
 
 module Authify
   module Core
@@ -13,6 +14,13 @@ module Authify
       ssl: {
         public:  ENV['AUTHIFY_PUBKEY_PATH'] || File.join('~', '.authify', 'ssl', 'public.pem'),
         private: ENV['AUTHIFY_PRIVKEY_PATH'] || File.join('~', '.authify', 'ssl', 'private.pem')
+      },
+      mail: {
+        server: {
+          address: 'smtp.myawesomecompany.com',
+          port:    '25'
+        },
+        from:    'noreply@myawesomecompany.com'
       },
       jwt: {
         algorithm: ENV['AUTHIFY_JWT_ALGORITHM'] || 'ES512',
