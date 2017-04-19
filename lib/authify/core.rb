@@ -17,10 +17,10 @@ module Authify
       },
       mail: {
         server: {
-          address: 'smtp.myawesomecompany.com',
-          port:    '25'
+          address: ENV['AUTHIFY_MAIL_ADDRESS'] || 'smtp.myawesomecompany.com',
+          port:    ENV['AUTHIFY_MAIL_PORT'] || '25'
         },
-        from:    'noreply@myawesomecompany.com'
+        from: ENV['AUTHIFY_MAIL_FROM'] || 'noreply@myawesomecompany.com'
       },
       jwt: {
         algorithm: ENV['AUTHIFY_JWT_ALGORITHM'] || 'ES512',
