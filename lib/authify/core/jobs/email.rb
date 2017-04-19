@@ -14,6 +14,7 @@ module Authify
             to: to,
             from: CONFIG[:mail][:from],
             subject: subject,
+            via: :smtp,
             via_options: CONFIG[:mail][:server]
           }
 
