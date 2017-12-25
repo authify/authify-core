@@ -29,8 +29,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.12'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.1'
-  spec.add_development_dependency 'rubocop', '~> 0.35'
-  spec.add_development_dependency 'yard',    '~> 0.8'
+  spec.add_development_dependency 'rubocop', '~> 0.49'
+  spec.add_development_dependency 'yard',    '~> 0.9.11'
   spec.add_development_dependency 'travis', '~> 1.8'
   spec.add_development_dependency 'simplecov', '~> 0.13'
 end
